@@ -10,10 +10,13 @@ define("MYSQL_USER", "root"); // Mysql user
 define("PLAYERS_PER_PAGE", "50");
 define("MINIMUM_POINTS", 10); // Minimum points to be on the rank, should be the same config as your plugin config
 
+// IGNORE EVERYTHING BELOW THIS LINE
 function getDatabase() {
     global $dbh;
+
     if ($dbh == null) {
         $dbh = new PDO("mysql:host=" . MYSQL_HOST . ";dbname=" . MYSQL_DATABASE, MYSQL_USER, MYSQL_PASSWORD);
     }
+
     return $dbh;
 }
